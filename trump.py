@@ -54,14 +54,14 @@ def transcribe_audio(file_path):
 def stt():
     while True:
         #  n = len([f for f in os.listdir('Temporary_files') if f.startswith(USER)]) + 1
-        n = len(os.listdir('Temporary_files')) + 1
-        file_path = f"Temporary_files/{n}.wav"  
+        un = len(os.listdir('Temporary_files/User')) + 1
+        file_path = f"Temporary_files/User/user {un}.wav"
         record_audio(file_path)
 
         text = transcribe_audio(file_path)
         print(text)
         choice = input("Do you want to Record/Type the message again? [(R)ecord, (T)ype, (N)o]: ")
-        print('\033[F','\r', ' '*70, '\r',  flush = True,sep = '', end = '') # to clear input line
+        print('\033[F','\r', '  '*50, '\r',  flush = True,sep = '', end = '') # to clear input line
 
         if choice.lower() == 'n':
             return text
@@ -109,13 +109,16 @@ def playtts(text):
     response = requests.get(output)
     if response.status_code == 200:
 
-        n = len([f for f in os.listdir('Temporary_files') if f.startswith('Trump')]) + 1
+        #  n = len([f for f in os.listdir('Temporary_files') if f.startswith('Trump')]) + 1
 
-        with open(f"Temporary_files/Trump {n}.wav", "wb") as f:
+        tn = len(os.listdir('temporary_files/trump')) + 1
+        file_path = f"temporary_files/trump/trump{tn}.wav"
+
+        with open(file_path, "wb") as f:
             f.write(response.content)
-        audio = AudioSegment.from_file(f"Temporary_files/Trump {n}.wav")
+        audio = audiosegment.from_file(file_path)
         audio_duration = len(audio)/1000
-        play_audio(f"Temporary_files/Trump {n}.wav")
+        play_audio(file_path)
         print_text_slowly(text, audio_duration)
         print()
         print()
