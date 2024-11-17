@@ -3,7 +3,7 @@
 ## A Terminal-Based AI Chatbot Featuring Donald Trump's Voice
 
 Trump-AI is a unique, terminal-based AI chatbot that allows users to interact with it using speech or text. The chatbot smartly converts speech to text, processes your input, and responds with AI-generated audio that mimics Donald Trump's voice. A fun and innovative way to combine voice recognition and AI-generated audio synthesis!
----
+
 ### DEMO 👇
 https://drive.google.com/file/d/1Gy8_WQ25AqtzKoAKdDnR1ekSe3yiHSe5/view?usp=sharing
 ---
