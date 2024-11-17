@@ -3,5 +3,4 @@ requests
 openai
 pydub
 httpx
-
 pygame
