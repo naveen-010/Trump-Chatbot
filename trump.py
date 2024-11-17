@@ -12,7 +12,7 @@ import speech_recognition as sr
 import subprocess
 
 # The terminal command you want to run
-command = "jp2a trump.jpg --colors --chars='01'"
+command = "jp2a Trump.jpg --colors --chars='01'"
 USER = os.environ.get('USER')
 # Run the command
 try:
