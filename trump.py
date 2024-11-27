@@ -53,6 +53,14 @@ def transcribe_audio(file_path):
             return "Could not request results from the speech recognition service."
 def stt():
     while True:
+        if not os.path.exists('Temporary_files'):
+            os.mkdir('Temporary_files')
+        if not os.path.exists('Temporary_files/User') :
+            os.mkdir('Temporary_files/User')
+        if not os.path.exists('Temporary_files/Trump') :
+            os.mkdir('Temporary_files/Trump')
+
+
         #  n = len([f for f in os.listdir('Temporary_files') if f.startswith(USER)]) + 1
         un = len(os.listdir('Temporary_files/User')) + 1
         file_path = f"Temporary_files/User/user {un}.wav"
